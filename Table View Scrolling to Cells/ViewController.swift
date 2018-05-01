@@ -7,7 +7,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var myTableView: UITableView!
     // this table view has a property in storyboard called paging enabled,
     // that has been set to trur
-    
+    // this table veiw is delegated and sourced to the self
     
     var previousPage: NSInteger = 0;
 
@@ -54,6 +54,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             previousPage = page;
             
+            /*
+             // here do what you need for compare
+ 
+             */
+            
+            
+            // next two lines, you can remove
             let selectedRow = myTableView.indexPathsForVisibleRows?.first;
             print(selectedRow as Any);
         }
